@@ -10,6 +10,11 @@ app.get('/',(req,res)=>{
     res.render('index');
 })
 
+//Conntecting to MongoDB using Mongoose package
+
+const install mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/my_database',{useNewUrlParser:true})
+
 
 app.use(express.static('public')) // registering public folder where static html files are stored
 
